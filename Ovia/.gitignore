@@ -10,7 +10,3 @@ obj/
 *.suo
 *.userosscache
 *.sln.docstates
-
-# Other IDE and OS junk
-*.log
-*.vsidx
