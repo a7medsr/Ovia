@@ -8,7 +8,7 @@ namespace Ovia.DTO
         public string Pass { get; set; }
        // public RoleEnum Role { get; set; }
         public string Email { get; set; }
-        public string LiveStyleId { get; set; }
+        
         public string? SponsorId { get; set; }
 
 

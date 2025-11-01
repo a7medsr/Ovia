@@ -57,7 +57,7 @@ builder.Services.AddTransient<FilesServices>();
 
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Momentum", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Ovia", Version = "v1" });
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Description = "JWT Authorization header using the Bearer scheme",

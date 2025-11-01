@@ -91,7 +91,7 @@ namespace Ovia.Services.SendEmails
             try
             {
                 await SendEmailAsync(userEmail,
-                    "Ruwad : Requested new password",
+                    "Ovia : Requested new password",
                     $@"
                     <html>
                     <head>
@@ -143,11 +143,11 @@ namespace Ovia.Services.SendEmails
                         <div class='container'>
                             <h4>Dear {name}</h4>
                             <div class='message'>
-                                <p>You have requested to reset your password for your Ruwad  account.</p>
+                                <p>You have requested to reset your password for your Ovia  account.</p>
                                 <p>Your new auto-generated password is: <strong>{newPassword}</strong></p>
                                 <p>For security reasons, please do not share this password with anyone.</p>
                             </div>
-                            <p class='footer'>Best regards,<br/>The Ruwad  Team</p>
+                            <p class='footer'>Best regards,<br/>The Ovia  Team</p>
                         </div>
                     </body>
                     </html>
@@ -165,7 +165,7 @@ namespace Ovia.Services.SendEmails
         public async Task SendWelcomeEmail(string userEmail, string username, string referId, string password)
         {
             await SendEmailAsync(userEmail,
-                "Ruwad : Welcome Email",
+                "Ovia : Welcome Email",
                 $@"
         <html>
         <head>
@@ -211,7 +211,7 @@ namespace Ovia.Services.SendEmails
         </head>
         <body>
             <div class='container'>
-                <h2>Welcome to Ruwad , {username}!</h2>
+                <h2>Welcome to Ovia , {username}!</h2>
                 <div class='message'>
                     <p>Thank you for joining our network marketing community. <br>
                     We are excited to have you on board.</p>
@@ -220,7 +220,7 @@ namespace Ovia.Services.SendEmails
                     <p>Here, you will discover endless opportunities for growth, success, and collaboration.</p>
                     <p>Feel free to explore our platform and connect with fellow members to maximize your experience.</p>
                 </div>
-                <p class='footer'>Best regards,<br/>The Ruwad  Team</p>
+                <p class='footer'>Best regards,<br/>The Ovia  Team</p>
             </div>
         </body>
         </html>
@@ -232,7 +232,7 @@ namespace Ovia.Services.SendEmails
         public async Task SendEmailToSponsor(string userEmail, string username, string sponsorId, string childName, string childId)
         {
             await SendEmailAsync(userEmail,
-                "Ruwad : New user join to your network",
+                "Ovia : New user join to your network",
                 $@"
         <html>
         <head>
@@ -293,7 +293,7 @@ namespace Ovia.Services.SendEmails
                     <p>Here, you will discover endless opportunities for growth, success, and collaboration.</p>
                     <p>Feel free to explore our platform and connect with fellow members to maximize your experience.</p>
                 </div>
-                <p class='footer'>Best regards,<br/>The Ruwad  Team</p>
+                <p class='footer'>Best regards,<br/>The Ovia  Team</p>
             </div>
         </body>
         </html>
@@ -307,7 +307,7 @@ namespace Ovia.Services.SendEmails
 
 
             await SendEmailAsync(email,
-                "Ruwad : Support Ticket",
+                "Ovia : Support Ticket",
                 $@"
 <html>
 <head>
@@ -369,7 +369,7 @@ namespace Ovia.Services.SendEmails
 
             </ul>
         </div>
-        <p class='footer'>Best regards,<br/>The Ruwad  Team</p>
+        <p class='footer'>Best regards,<br/>The Ovia  Team</p>
     </div>
 </body>
 </html>
@@ -381,7 +381,7 @@ namespace Ovia.Services.SendEmails
             string username, string ChildReferId, decimal profit, string childName)
         {
             await SendEmailAsync(userEmail,
-                "Ruwad :Child in your network buy a package",
+                "Ovia :Child in your network buy a package",
                 $@"
         <html>
         <head>
@@ -443,7 +443,7 @@ namespace Ovia.Services.SendEmails
                     <p>Here, you will discover endless opportunities for growth, success, and collaboration.</p>
                     <p>Feel free to explore our platform and connect with fellow members to maximize your experience.</p>
                 </div>
-                <p class='footer'>Best regards,<br/>The Ruwad  Team</p>
+                <p class='footer'>Best regards,<br/>The Ovia  Team</p>
             </div>
         </body>
         </html>
@@ -458,7 +458,7 @@ namespace Ovia.Services.SendEmails
             (string userEmail, string username, decimal Comission, DateTime date)
         {
             await SendEmailAsync(userEmail,
-                "Ruwad : Ruwad convert your commission",
+                "Ovia : Ovia convert your commission",
                 $@"
         <html>
         <head>
@@ -503,7 +503,7 @@ namespace Ovia.Services.SendEmails
             <div class='container'>
                 <h2>Dear {username}!</h2>
                 <div class='message'>
-                    <p>Ruwad  has converted your commission.</p>
+                    <p>Ovia  has converted your commission.</p>
                     <ul>
                         <li><strong>Your commission:</strong> ${Comission}</li>
                         <li><strong>Conversion Date:</strong> {date}</li>
@@ -511,7 +511,7 @@ namespace Ovia.Services.SendEmails
                     <p>Here, you will discover endless opportunities for growth, success, and collaboration.</p>
                     <p>Feel free to explore our platform and connect with fellow members to maximize your experience.</p>
                 </div>
-                <p class='footer'>Best regards,<br/>The Ruwad  Team</p>
+                <p class='footer'>Best regards,<br/>The Ovia  Team</p>
             </div>
         </body>
         </html>
@@ -524,7 +524,7 @@ namespace Ovia.Services.SendEmails
             var username = atIndex != -1 ? userEmail.Substring(0, atIndex) : "User";
 
             await SendEmailAsync(userEmail,
-                                 "Ruwad : Subscription Confirmation",
+                                 "Ovia : Subscription Confirmation",
                                  $@"
         <html>
         <head>
@@ -569,11 +569,11 @@ namespace Ovia.Services.SendEmails
             <div class='container'>
                 <h2>Dear {username},</h2>
                 <div class='message'>
-                    <p>Thank you for subscribing to Ruwad !</p>
+                    <p>Thank you for subscribing to Ovia !</p>
                     <p>We're excited to have you on board. You're now part of a vibrant community dedicated to growth, success, and collaboration.</p>
                     <p>Feel free to explore our platform and stay updated with our latest notifications.</p>
                 </div>
-                <p class='footer'>Best regards,<br/>The Ruwad  Team</p>
+                <p class='footer'>Best regards,<br/>The Ovia  Team</p>
             </div>
         </body>
         </html>
@@ -645,7 +645,7 @@ namespace Ovia.Services.SendEmails
             <p>{Reply}</p>
 
         </div>
-        <p class='footer'>Best regards,<br/>The Ruwad  Team</p>
+        <p class='footer'>Best regards,<br/>The Ovia  Team</p>
     </div>
 </body>
 </html>", file != null ? new List<IFormFile> { file } : null);
@@ -702,7 +702,7 @@ namespace Ovia.Services.SendEmails
             <p>ID: <strong>{referId}</strong></p>
             <p>Password: <strong>{password}</strong></p>
         </div>
-        <p class='footer'>Best regards,<br/>The Ruwad  Team</p>
+        <p class='footer'>Best regards,<br/>The Ovia  Team</p>
     </div>
 </body>
 </html>
@@ -762,7 +762,7 @@ namespace Ovia.Services.SendEmails
             <p>Please confirm your OTP before 10 minutes.</p>
             <p>Your Confirmation otp : <strong>{otp}</strong></p>
         </div>
-        <p class='footer'>Best regards,<br/>The Ruwad  Team</p>
+        <p class='footer'>Best regards,<br/>The Ovia  Team</p>
     </div>
 </body>
 </html>
@@ -819,9 +819,9 @@ namespace Ovia.Services.SendEmails
         <div class='message'>
             <p>Thank you for joining the event.</p>
             <p>Your Ticket number: <strong>{TicketNumber}</strong>.</p>
-            <p>You can see your ticket <a href='https://Ruwad -net.com/ticket/{TicketNumber}'>here</a>.</p>
+            <p>You can see your ticket <a href='/ticket/{TicketNumber}'>here</a>.</p>
         </div>
-        <p class='footer'>Best regards,<br/>The Ruwad  Team</p>
+        <p class='footer'>Best regards,<br/>The Ovia  Team</p>
     </div>
 </body>
 </html>

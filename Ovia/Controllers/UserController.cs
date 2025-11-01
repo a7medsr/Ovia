@@ -266,7 +266,7 @@ namespace Ovia.Controllers
                     Password = request.Pass,
                     RoleId = 3,
                     CountryId = 63,
-                    LiveStyleId = request.LiveStyleId
+                   
                 };
 
                 momDb.CustomerInfo.Add(customerInfo);
