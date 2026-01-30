@@ -1948,6 +1948,27 @@ namespace Ovia.Controllers
                     momDb.Customerselectpackages.Add(customerPackage);
                     await momDb.SaveChangesAsync();
 
+                    var courseList = await momDb.CoursePackageMappings
+             .Where(c => c.PackageId == packId)
+             .ToListAsync();
+
+
+                    if (courseList.Count != 0)
+                    {
+                        foreach (var course in courseList)
+                        {
+                            var customerCourseMapping = new CourseCustomerMapping
+                            {
+                                CustomerId = customerPackage.CustomerId,
+                                CourseId = course.CourseId,
+                                PackageSelectId = customerPackage.Id
+                            };
+                            momDb.CourseCustomerMapping.Add(customerCourseMapping);
+                        }
+
+                        await momDb.SaveChangesAsync();
+                    }
+
                     //point process for distrubistor to distributor
                     var pointDistributor = await Add_PointProcess_To_Sponsor(new AddPointProcessDTO() { SponsorId = dto.customerAttributeId, PackageId = packId, ProcessTypeId = 1, Value = (decimal)packageSelected.SponsorDistributorToDistributor });
                     //point process for Buisness Value
