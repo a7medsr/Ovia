@@ -125,7 +125,7 @@ namespace Ovia.Controllers
             var photo = await momDb.Photo
                                 .Where(c => c.CustomerId == customerId)
                                 .OrderByDescending(p => p.UploadDate) // Assuming you want the most recently uploaded photo
-                                .LastOrDefaultAsync();
+                                .FirstOrDefaultAsync();
 
             if (photo == null)
             {
