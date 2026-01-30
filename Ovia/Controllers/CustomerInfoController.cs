@@ -235,7 +235,7 @@ namespace Ovia.Controllers
         //            }
         //        }
 
-        //        // Create a dummy parent DTO to hold root-level children
+        //        // Create a duparent DTO to hold root-level children
         //        NetworkDTO rootDto = new NetworkDTO();
         //        GetChildren(ParentId, rootDto);
 

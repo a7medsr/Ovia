@@ -100,6 +100,13 @@ namespace Ovia.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+        //[HttpGet("total_profit")]
+        //public async Task<int> totalprofit(int usertid)
+        //{
+        //    int profit = (int)dbContext.Profit.Where(x => x.DistributorId == usertid).Sum(x => x.Profit1);
+        //    return profit;
+        //    // return Ok(profit.ToString());
+        //}
 
         private DateTime GetStartOfWeek(DateTime date)
         {

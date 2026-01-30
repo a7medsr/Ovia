@@ -2147,13 +2147,16 @@ namespace Ovia.Controllers
                     .Where(c => c.CustomerId == customerAttributeId)
                         .OrderByDescending(c => c.Id).LastOrDefaultAsync();
 
-
+                int tot = 0;
+                if (avaliable != null) tot = (int)avaliable.Balance;
+                
+             
 
                 // Calculate TotalAmount for all time
                 var totalAmount = await momDb.Profit
                     .Where(p => p.DistributorId == customerAttributeId)
                     .SumAsync(p => p.Profit1);
-                return Ok(new { HoldAmount = holdAmount, AvaliableAmount = avaliable.Balance, TotalAmount = totalAmount, from = reportFromDate, to = reportToDate });
+                return Ok(new { HoldAmount = holdAmount, AvaliableAmount = tot , TotalAmount = totalAmount, from = reportFromDate, to = reportToDate });
 
 
             }

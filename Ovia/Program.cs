@@ -301,9 +301,7 @@ RecurringJob.AddOrUpdate<ProfitToCustomerAccountConverter>(
 //           x => x.Distribute_Comission_LeFt_and_Right_Points(),
 //           "*/10 * * * 0"); // Runs every 10 minutes on Sundays
 
-//RecurringJob.AddOrUpdate<BV>(
-//    x => x.Distribute_BV_Comission(),
-//    "0 1 * * *"); // Runs daily at 1:00 AM
+RecurringJob.AddOrUpdate<BV>(x => x.Distribute_BV_Comission(), "0 1 * * *"); // Runs daily at 1:00 AM
 
 
 //RecurringJob.AddOrUpdate<ProfitToCustomerAccountConverter>(
